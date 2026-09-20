@@ -1,0 +1,6 @@
+{
+  "name": "HealthGuard — Daily Health Register",
+  "description": "Real working AI Food Photo Quantity & Nutrition Analyzer, clinical-grade daily health register with biological risk radar, natural language logger, and lab decoder.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

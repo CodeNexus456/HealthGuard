@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #2C3E66;
+  --primary-dark: #1D2A46;
+  --primary-light: #DDE3EF;
+  --success: #4B7355;
+  --amber: #B5822A;
+  --saffron: #B5822A;
+  --red: #A8452C;
+  --ink: #22271F;
+  --slate: #55584C;
+  --muted: #8B8776;
+  --border: #CFC9B4;
+  --bg: #F1EFE6;
+  --paper: #FBFAF3;
+  --card-shadow: 0 1px 2px rgba(34, 39, 31, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'IBM Plex Serif', Georgia, Cambria, serif;
+}
+
+.font-mono, .badge, code, pre {
+  font-family: 'IBM Plex Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #CFC9B4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5822A;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Print Stylesheet for Doctor Dossier */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print, nav, #toastContainer, #modalRoot {
+    display: none !important;
+  }
+  .page {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .card {
+    border: 1px solid #999 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}
